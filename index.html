@@ -1,1 +1,36 @@
-Hello World
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link href="styles.css" rel="stylesheet"/>
+        </head>
+        <body>
+            <header>
+                <ul>
+                    <li id='about-me' onclick="switch_section('about-me');">about me</li>
+                    <li id='artwork' onclick="switch_section('artwork');">artwork</li>
+                    <li id='projects' onclick="switch_section('projects');">projects</li>
+                </ul>
+            </header>
+            <footer>
+                <section class="page" id="about-me">
+                    <h1>Asaf Amithiel</h1>
+                    <h3>Brazilian Game Developer and Artist</h3>
+                </section>
+                <section class="page" id="artwork">
+                    <img src="./assets/tileset-1.png" alt="" class="canvas">
+                    <img src="./assets/golem-1.gif" alt="" class="canvas">
+                    <img src="./assets/slime-1.gif" alt="" class="canvas">
+                </section>
+                <section class="page" id="projects">
+                    <div class="project"></div>
+                    <div class="project"></div>
+                    <div class="project"></div>
+                    <div class="project"></div>
+                </section>
+            </footer>
+        </body>
+        <script src="script.js"></script>
+    </html>
