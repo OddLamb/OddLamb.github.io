@@ -1,36 +1,63 @@
 <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
-            <link href="styles.css" rel="stylesheet"/>
-        </head>
-        <body>
-            <header>
-                <ul>
-                    <li id='about-me' onclick="switch_section('about-me');">about me</li>
-                    <li id='artwork' onclick="switch_section('artwork');">artwork</li>
-                    <li id='projects' onclick="switch_section('projects');">projects</li>
-                </ul>
-            </header>
-            <footer>
-                <section class="page" id="about-me">
-                    <h1>Asaf Amithiel</h1>
-                    <h3>Brazilian Game Developer and Artist</h3>
-                </section>
-                <section class="page" id="artwork">
-                    <img src="./assets/tileset-1.png" alt="" class="canvas">
-                    <img src="./assets/golem-1.gif" alt="" class="canvas">
-                    <img src="./assets/slime-1.gif" alt="" class="canvas">
-                </section>
-                <section class="page" id="projects">
-                    <div class="project"></div>
-                    <div class="project"></div>
-                    <div class="project"></div>
-                    <div class="project"></div>
-                </section>
-            </footer>
-        </body>
-        <script src="script.js"></script>
-    </html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./styles.css">
+     </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#links">Links</a></li>
+            </ul>
+        </nav>
+        <div class="section" id="home">
+            <span class="introduction">
+                <span class="text-container">
+                    <span class="title">
+                        <p>Greetings, im Asaf 👋</p>
+                    </span>
+                    <span class="desc">
+                        <p>A young and motivated student passionate about web and game development, focused on improving technical skills, building efficient solutions, and turning creative concepts into interactive digital experiences.</p>
+                    </span>
+                    <span id="skillicons">
+                        <a href="https://skillicons.dev">
+                            <img src="https://skillicons.dev/icons?i=cpp,java,javascript,python,nodejs,p5js,git,linux" />
+                        </a>
+                    </span>
+                </span>
+                <span class="decorative-image">
+                    <img src="./assets/avatar-flat.png">
+                </span>
+            </span>
+        </div>
+        <div class="section" id="projects">
+            <span class="introduction">
+                <span class="decorative-image">
+                    <img src="./assets/ilustração-projetos.svg">
+                </span>
+                <span class="text-container">
+                    <span class="title">
+                        <p>Projects 💾</p>
+                    </span>
+                    <span class="desc">
+                        <p>These projects showcase my passion for web and game development, combining creativity, logic, and design to bring interactive ideas to life. Each one reflects my growth as a developer and my curiosity to keep exploring new possibilities.</p>
+                    </span>
+                </span>
+                
+            </span>
+            <div id="project-list"></div>
+        </div>
+        <div class="section" id="certificates">
+            
+        </div>
+        <div class="section" id="links">
+
+        </div>
+    </body>
+    <script src="./script.js"></script>
+</html>

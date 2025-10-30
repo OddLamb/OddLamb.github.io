@@ -1,25 +1,22 @@
-var current_section = "artwork";
-var all_sections = document.querySelectorAll(".page");
-var all_buttons = document.querySelectorAll("li");
-function update_sections(){
-    for(var i = 0;i<all_buttons.length;i++){
-        if(all_buttons[i].id == current_section){
-            all_buttons[i].style.fontSize = "1.7rem";
-        }else{
-            all_buttons[i].style.fontSize = "1.2rem";
-        }
+const projects = [
+    {
+        "title": "64 Casas",
+        "desc": "A online multiplayer chess game developed with Node.js and Socket.io for the server and p5.js as a renderer for the client",
+        "img": "64-casas-thumbnail.png",
+        "url": "https://github.com/OddLamb/64-casas"
     }
-    for(var i = 0;i<all_sections.length;i++){
-        if(all_sections[i].id == current_section){
-            all_sections[i].style = "display: block;";
-        }else{
-            all_sections[i].style = "display: none;";
-        }
-    }
-}
-function switch_section(id){
-    console.log(id);
-    current_section = id;
-    update_sections();
-}
-update_sections();
+]
+projects.forEach((project) => {
+    const projectList = document.querySelector("#project-list");
+    projectList.innerHTML += `
+        <span class="project">
+            <span class="text-container">
+                <span class="title">${project.title}</span>
+                <span class="desc">${project.desc}</span>
+            </span>
+            <span class="thumbnail">
+                <img src="./assets/thumbnails/${project.img}" alt="">
+            </span>
+            <a href="${project.url}">Source</a>
+        </span>`
+})
